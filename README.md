@@ -74,7 +74,7 @@ git clone https://github.com/your-username/smile-detection.git
 cd smile-detection
 
 # 必要なパッケージをインストール
-pip install numpy scikit-learn matplotlib jupyter
+pip install -r requirements.txt
 ```
 
 ### データセット
@@ -100,9 +100,9 @@ jupyter notebook smile_detection.ipynb
 
 ### 関数の使用例
 
-```python
-from smile_detection import smile_predict
+`smile_predict()` はノートブック内で定義される関数です。ノートブックのセルを順番に実行した後、以下のように使用できます。
 
+```python
 # 特徴点データの例
 facial_data = [
     "sample_id",
@@ -156,6 +156,7 @@ print(result)  # True (笑顔) または False (非笑顔)
 ```
 smile-detection/
 ├── README.md                      # プロジェクト説明
+├── requirements.txt               # 依存パッケージ一覧
 ├── smile_detection.ipynb          # メインの実装ノートブック
 ├── smile_detection_report.md      # 詳細な検証レポート
 ├── output.png                     # 特徴点の可視化結果
